@@ -15,6 +15,6 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4.2.3
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: main
+        BRANCH: gh-pages
         FOLDER: docs/.vuepress/dist
         BUILD_SCRIPT: npm install && npm run docs:build
