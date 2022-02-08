@@ -21,7 +21,7 @@ jobs:
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
         git init 
-        git brach -m "gh-pages"
+        git branch -m "gh-pages"
         git add .
         git commit -am "auto build publish"
         git push
