@@ -19,6 +19,6 @@ jobs:
       run: |
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
-        git status
+        git add docs/
         git commit -am "auto build publish"
         git push
