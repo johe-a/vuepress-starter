@@ -23,6 +23,6 @@ jobs:
         git init 
         git add .
         git commit -am "auto build publish"
-        git push -f git@github.com:johe-a/vuepress-starter.git origin:gh-pages
+        git push -f git@github.com:johe-a/vuepress-starter.git master:gh-pages
 
 
