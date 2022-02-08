@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2 
-    - name: prepare environment
-      uses: actions/setup-node@v2
+    - uses: actions/setup-node@v2
       with:
         node-version: '14'
+    - name: prepare environment
       run: npm install
+    - name: build application
       run: npm run docs:build
