@@ -17,9 +17,9 @@ jobs:
         npm run docs:build
     - name: Deploy
       run: |
-        git config --global user.name johe
-        git config --global user.email 634665857@qq.com
-        mv  docs/.vuepress/dist ./docs
-        git add docs
+        cd  docs/.vuepress/dist
+        git init 
+        git add .
         git commit -am "auto build publish"
-        git push origin gh-pages
+        git push -f git@github.com:johe-a/vuepress-starter.git origin:gh-pages
+
