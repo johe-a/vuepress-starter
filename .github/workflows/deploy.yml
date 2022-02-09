@@ -22,8 +22,7 @@ jobs:
         git config --global user.email 634665857@qq.com
         git init 
         git add .
-        git commit -am "auto build publish"
-        git push main:gh-pages
+        git commit -m "auto build publish"
     - name: GitHub Push
       uses: ad-m/github-push-action@v0.6.0
       with:
