@@ -2,7 +2,7 @@ module.exports = {
   theme: 'reco',
   title: 'johe的个人博客',
   description: 'johe的个人博客',
-  base: '/vuepress-page/',
+  base: '/vuepress-starter/',
   locales: {
     '/': {
       lang: 'zh-CN'
