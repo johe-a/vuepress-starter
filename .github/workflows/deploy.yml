@@ -18,7 +18,7 @@ jobs:
     - name: Git init
       run: |
         cd  docs/.vuepress/dist
-        git config --global user.name johe
+        git config --global user.name johe-a
         git config --global user.email 634665857@qq.com
         git init 
         git add .
