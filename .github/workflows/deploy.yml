@@ -15,14 +15,21 @@ jobs:
       run: |
         npm install
         npm run docs:build
-    - name: Deploy
+    - name: Git init
       run: |
         cd  docs/.vuepress/dist
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
         git init 
-        git branch -m "gh-pages"
         git add .
         git commit -am "auto build publish"
         git push main:gh-pages
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        branch: gh-pages
+        force: true
+        directory: ./docs/.vuepress/dist
+
 
