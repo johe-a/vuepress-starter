@@ -24,6 +24,5 @@ jobs:
         git branch -m "gh-pages"
         git add .
         git commit -am "auto build publish"
-        git push origin gh-pages
-
+        git push main:gh-pages
 
