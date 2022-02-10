@@ -22,10 +22,11 @@ jobs:
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
         git init 
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
         git checkout -b gh-pages
         git add .
         git commit -m "auto build publish"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git -u origin gh-pages
+        git push -u origin gh-pages
     # - name: GitHub Push
     #   uses: ad-m/github-push-action@v0.6.0
     #   with:
