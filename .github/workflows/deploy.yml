@@ -15,18 +15,19 @@ jobs:
       run: |
         npm install
         npm run docs:build
-    - name: Git init
+    - name: Git Init
       run: |
         cd  docs/.vuepress/dist
         touch .nojekyll
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
         git init
+        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
+    - name: Push Github Pages
         git checkout -b gh-pages
         git add .
         git commit -m "auto build publish"
-        git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
         git push -f -u origin gh-pages
     # - name: GitHub Push
     #   uses: ad-m/github-push-action@v0.6.0
