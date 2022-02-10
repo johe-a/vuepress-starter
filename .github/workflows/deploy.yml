@@ -25,6 +25,7 @@ jobs:
         git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
     - name: Push Github Pages
+      run: |
         git checkout -b gh-pages
         git add .
         git commit -m "auto build publish"
