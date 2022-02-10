@@ -18,17 +18,19 @@ jobs:
     - name: Git init
       run: |
         cd  docs/.vuepress/dist
+        touch .nojekyll
         git config --global user.name johe
         git config --global user.email 634665857@qq.com
         git init 
         git add .
         git commit -m "auto build publish"
-    - name: GitHub Push
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: gh-pages
-        directory: ./docs/.vuepress/dist
-        force: true
+        git push https://${{ secrets.GITHUB_TOKEN }}@github.com/johe/vuepress-starter.git
+    # - name: GitHub Push
+    #   uses: ad-m/github-push-action@v0.6.0
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     branch: gh-pages
+    #     directory: ./docs/.vuepress/dist
+    #     force: true
 
 
