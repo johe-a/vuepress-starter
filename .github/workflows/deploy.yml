@@ -24,7 +24,7 @@ jobs:
         git init 
         git add .
         git commit -m "auto build publish"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/vuepress-starter.git
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/johe-a/vuepress-starter.git
     # - name: GitHub Push
     #   uses: ad-m/github-push-action@v0.6.0
     #   with:
